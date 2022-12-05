@@ -1,0 +1,35 @@
+S' -> PROG
+PROG -> BEGIN STMTLIST END
+STMTLIST -> { STMT }
+STMT -> ASSIGN STMT
+STMT -> LOOP STMT
+STMT -> IF STMT
+STMT -> ''
+ASSIGN -> type id = value ;
+type -> sint
+type -> mint
+type -> lint
+type -> xlint
+value -> expr bool
+IF -> choos body
+LOOP -> loop body
+body -> ( value ) STMTLIST
+bool -> ''
+bool -> boolop expr
+boolop -> >
+boolop -> <
+boolop -> ==
+boolop -> !=
+boolop -> >=
+boolop -> <=
+expr -> term
+expr -> term + term
+expr -> term - term
+term -> factor
+term -> factor * factor
+term -> factor / factor
+term -> factor % factor
+factor -> id
+factor -> literal
+factor -> ( expr )
+

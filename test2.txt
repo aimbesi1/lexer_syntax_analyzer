@@ -1,0 +1,14 @@
+BEGIN {
+
+mint number_X = 1 ;
+mint number_Y = 2 ;
+
+  choos ( number_X == 1 * 1 ) {
+    sint index_i = 1 ;
+    loop ( index_i <= 10 ) {
+      mint number_Y = number_Y % 10 ; 
+    }
+  }
+}
+
+END

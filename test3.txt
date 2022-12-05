@@ -1,0 +1,15 @@
+BEGIN {
+
+number_X = 1 ;
+number_Y += 2 ;
+
+choos ( number_42 > 42 ) {
+	
+	lop ( number_Z != 2 ) {
+		number_ZZ = 3;
+	}
+?
+}
+}
+
+END

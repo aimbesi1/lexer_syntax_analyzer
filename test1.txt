@@ -1,0 +1,13 @@
+BEGIN {
+
+mint number_X = 1 ;
+mint number_Y = 2345 ;
+
+choos ( number_X == 1 ) {
+  sint number_Z = 3 ;
+  xlint number_Y = 1 + ( 2 - 4 * 6 ) ;
+}
+
+}
+
+END

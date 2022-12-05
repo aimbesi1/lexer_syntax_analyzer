@@ -1,0 +1,13 @@
+BEGIN {
+
+mint number_X = 1 ;
+xlint number_Y = 2 ;
+
+choos ( number_Z > 42 > 0) (
+	
+	loop ( number_Z != 2 ) {
+		number_Z == 3 ;
+	}
+
+)
+}
