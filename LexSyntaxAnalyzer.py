@@ -155,15 +155,18 @@ def error(errorMsg):
 
 # <PROG> -> BEGIN {<STMT_LIST>} END
 # <STMT_LIST> -> `{`{<STMT>}`}`
-# <STMT> -> <ASSIGN> | <LOOP> | <IF>
+# <STMT> -> <ASSIGN> | <LOOP> | <IF> | :empty:
 # <ASSIGN> -> <type> <id> = <value> ;
 # <value> -> <expression> <bool>
-# <IF> -> choos `(`<value>`)` {<STMT_LIST>}
-# <LOOP> -> loop `(`<value>`)` {<STMT_LIST>}
+# <IF> -> choos <body>
+# <LOOP> -> loop <body>
+# <body> -> `(`<value>`)` {<STMT_LIST>}
 
 # <bool> -> :empty: | ((<|<=|==|!=|>=|>) <expression>)
-# <expression> -> <term> {(+|-) <term>}
-# <term> -> <factor> {(*|/|%) <factor>}
+# <expression> -> <term> <exp_p>
+# <exp_p> -> (+|-) <term> <exp_p> | :empty:
+# <term> -> <factor> <term_p>
+# <term_p> -> (*|/|%) <factor> <term_p> | :empty:
 # <factor> -> <id> | <literal> | `(`<expression>`)`
 
 
