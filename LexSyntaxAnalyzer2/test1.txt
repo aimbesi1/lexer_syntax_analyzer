@@ -1,0 +1,11 @@
+BEGIN {
+$$ Comment!!
+ real number_x = 1 * 5;
+ nat number_y = myfunc(6, number_Z);
+
+$*
+Multi line comment!!
+} END
+*$
+
+} END
